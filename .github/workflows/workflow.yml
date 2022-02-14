@@ -1,0 +1,10 @@
+name: Error test
+on:
+  push:
+jobs:
+  RepoError:
+    name: RepoError
+    runs-on: self-hosted
+    steps:
+      - name: Release
+        run: nix-shell -p helo --run "echo hello"
