@@ -6,5 +6,7 @@ jobs:
     name: RepoError
     runs-on: self-hosted
     steps:
+      - name: Printenv
+        run: printenv
       - name: Release
         run: nix-shell -p helo --run "echo hello"
